@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#htmlData {
+  border: 1px solid blue;
+  margin: auto 4em;
+  overflow: hidden;
+}
+
+#jsonData {
+  border: 1px solid green;
+  margin: auto 4em;
+  overflow: hidden;
+}
