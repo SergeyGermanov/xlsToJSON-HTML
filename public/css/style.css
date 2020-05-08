@@ -16,5 +16,9 @@
 }
 
 .tableBorder {
-  border: 1px double grey;
+  background-color: silver;
+}
+
+.colorOdd {
+  background-color: cadetblue;
 }
