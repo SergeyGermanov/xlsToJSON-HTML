@@ -9,6 +9,7 @@ document
   });
 
 //   Listener for HTML converter button
+let obj;
 document.querySelector("#uploadHTML").addEventListener("click", function () {
   if (selectedFile) {
     console.log("HTML File is Ready");
@@ -24,8 +25,13 @@ document.querySelector("#uploadHTML").addEventListener("click", function () {
       });
 
       document.querySelector("#htmlData").innerHTML = htmlStr;
+      obj = document.querySelectorAll('#htmlData tr');
+      addDeleteBtn(obj);
+
     };
   }
+
+
 });
 
 //   Listener for JSON converter button
@@ -49,5 +55,39 @@ document.getElementById("uploadExcel").addEventListener("click", function () {
     fileReader.readAsBinaryString(selectedFile);
   }
 });
+
+
+// delete row from myTable
+function deleteRow(row) {
+  var rowObj = row.parentNode.parentNode.rowIndex;
+  document.querySelector("#htmlData table").deleteRow(rowObj);
+}
+
+
+// create a var with all rows in the tabel
+
+// add a delete button to every row
+function addDeleteBtn(obj) {
+  obj.forEach(tr => {
+    let td = document.createElement('td');
+    let btn = document.createElement('input');
+    btn.setAttribute('type', 'button');
+    btn.setAttribute('value', 'Delete Row');
+    btn.setAttribute('onclick', 'deleteRow(this)');
+    td.appendChild(btn);
+    tr.insertBefore(td, tr.childNodes[0]);
+    console.log(tr);
+  });
+}
+
+// select one column
+function columnSelect(number) {
+  let obj = document.querySelectorAll(`table td:nth-child(${number})`);
+  obj.forEach(el => {
+    el.style.backgroundColor = "red";
+  });
+}
+
+
 
 // Copyright@Sergey Germanov

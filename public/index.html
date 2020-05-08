@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>XLS to JSON</title>
-      
-   <script type="text/javascript" src="js/xlsx.full.min.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>XLS to JSON</title>
+
+  <script type="text/javascript" src="js/xlsx.full.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+</head>
 
-    <input type="file" id="fileUpload" accept=".xls, .xlsx"/>
+<body>
 
-    <button id="uploadExcel">Convert to JSON</button>
-    <button id="uploadHTML">Convert HTML</button>
+  <input type="file" id="fileUpload" accept=".xls, .xlsx" />
 
-    </br></br>
+  <button id="uploadExcel">Convert to JSON</button>
+  <button id="uploadHTML">Convert HTML</button>
 
-    <h2> HTML : </h2>
-    <div id="htmlData"></div>
+  </br></br>
 
-    <h2> JSON : </h2>
-    <div id="jsonData"></div>
+  <h2> HTML : </h2>
+  <div id="htmlData"></div>
 
-    <script src="js/xlsx.js">
-   </script>
+  <h2> JSON : </h2>
+  <div id="jsonData"></div>
+
+  <script src="js/xlsx.js">
+  </script>
+
   <!-- <p>Copyright@Sergey Germanov</p> -->
-  </body>
+</body>
+
 </html>

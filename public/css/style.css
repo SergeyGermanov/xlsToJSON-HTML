@@ -6,11 +6,15 @@
 #htmlData {
   border: 1px solid blue;
   margin: auto 4em;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 #jsonData {
   border: 1px solid green;
   margin: auto 4em;
-  overflow: hidden;
+  overflow: scroll;
+}
+
+.tableBorder {
+  border: 1px double grey;
 }
